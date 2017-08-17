@@ -42,10 +42,21 @@ public class CustomerOrderController {
 		Customer customer = cart.getCustomer();
 		customer.setShippingaddress(shippingaddress);
 		cart.setCustomer(customer);
+		/*CustomerOrder customerOrder = customerOrderService.Createorder(cart);
+		model.addAttribute("order", customerOrder);*/
+		model.addAttribute("cartid", cartId);
+		return "payment";
+	}
+	@RequestMapping("/cart/pay/{cartid}")
+	public String payment(@PathVariable int cartid, Model model)
+	{
+		cart cart = cartitemservice.getCart(cartid);
+		Customer customer = cart.getCustomer();
 		CustomerOrder customerOrder = customerOrderService.Createorder(cart);
 		model.addAttribute("order", customerOrder);
-		model.addAttribute("cartid", cartId);
+		model.addAttribute("cartid", cartid);
 		return "orderdetails";
+		
 	}
 
 	@RequestMapping("/cart/confirm/{id}")

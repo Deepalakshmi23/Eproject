@@ -26,6 +26,7 @@
 			org.springframework.web.context.ContextLoaderListener
 		</listener-class>
 	</listener>
+	<!-- throwexception -->
 	<servlet>
 		<servlet-name>dispatcher</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -37,12 +38,26 @@
 	</init-param>
 		
 	</servlet>
-	<!-- throwexception -->
+	
 	
 	<servlet-mapping>
+	
+	
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+<error-page>
+<error-code>404</error-code>
+<location>/WEB-INF/views/405.jsp</location>
 
+
+</error-page>
+<error-page>
+
+<error-code>403</error-code>
+<location>/WEB-INF/views/406.jsp</location>
+
+
+</error-page>
 
 </web-app>

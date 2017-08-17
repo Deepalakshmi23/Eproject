@@ -71,7 +71,7 @@
                                         <td class="col-md-1" style="text-align: center">${cartItem.quantity}</td>
                                         <td class="col-md-1" style="text-align: center">${cartItem.product.price}</td>
                                         <td class="col-md-1" style="text-align: center">${cartItem.totalprice}</td>
-                                        <c:set var="grandTotal" value="${grandtotal + cartItem.totalprice }"></c:set>
+                                        <c:set var="grandTotal" value="${grandtotal + cartItem.cart.grandtotal }"></c:set>
                                     </tr>
                                 </c:forEach>
 
@@ -101,4 +101,4 @@
         </div>
 </div>
 </div>
-<%-- <%@ include file="footer.jsp" %> --%>
+<%@ include file="footer.jsp" %> 

@@ -20,8 +20,8 @@
 
 					<div style="display: none" id="login-alert"
 						class="alert alert-danger col-sm-12"></div>
-					<c:url value="/admin/savecategory" var="action"></c:url>
-					<form:form action="${action}" method="post" name="form"
+					<c:url value="/admin/savecategory" var="action1"></c:url>
+					<form:form action="${action1}" method="post" name="form"
 						modelAttribute="category">
 
 						<form:hidden path="id" />
@@ -43,7 +43,7 @@
 									placeholder="CategoryDescription"></textarea>
 							</div>
 						</div>
-
+<br>
 						<div class="form-group">
 							<div class="col-md-offset-3 col-md-9">
 								<button id="btn-signup" type="submit" class="btn btn-info">
@@ -56,3 +56,5 @@
 			</div>
 </body>
 </html>
+
+<%@ include file="footer.jsp"%>

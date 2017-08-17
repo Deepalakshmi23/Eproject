@@ -29,7 +29,7 @@
 
 <script>
 	$(document).ready(function() {
-		var searchCondition='${searchCondition}';
+		var searchCondition= '${searchCondition}';
 		$('.table').DataTable({
 			"lengthMenu" : [ [ 3, 5, 7, -1 ], [ 3, 5, 7, "All" ] ],
 			"oSearch" : {
@@ -49,10 +49,10 @@
 <table class="table table-striped">
 			<thead>
 				<tr>
-					<th>image</th>
-					<th>productName</th>
-					<th>price</th>
-					<th>category</th>
+					<th>Image</th>
+					<th>ProductName</th>
+					<th>Price</th>
+					<th>Category</th>
 					<th>Action</th>
 
 
@@ -101,3 +101,5 @@
 
 </body>
 </html>
+
+<%@ include file="footer.jsp"%>

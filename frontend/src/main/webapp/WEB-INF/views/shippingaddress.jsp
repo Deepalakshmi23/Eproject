@@ -8,7 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body style="background-color:blue;">
+<body>
 	<div class="container">
 		<c:url value="/cart/order/${cartid}" var="action"></c:url>
 		<form:form action="${action}" method="post" modelAttribute="shippingaddress">
@@ -52,8 +52,11 @@
 		</form:form>
 	</div>
 	    
-	<%-- <%@ include file="footer.jsp"%> --%>
+	
 	
 	
 </body>
 </html>
+
+
+<%@ include file="footer.jsp"%>

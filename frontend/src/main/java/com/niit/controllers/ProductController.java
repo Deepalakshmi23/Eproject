@@ -37,7 +37,7 @@ public class ProductController {
 		public ProductController() {
 			System.out.println("productcontroller");
 	}
-	@RequestMapping("/all/product/getproductform")
+	@RequestMapping("/admin/product/getproductform")
 	public String getProductForm(Model model) 
 	{
 		List<Category> category=productservice.getAllCategory();
@@ -74,10 +74,11 @@ public String saveproduct(@Valid @ModelAttribute (name="product") Product produc
 	return "redirect:/all/product/productlist";
 }
 @RequestMapping("/all/product/productlist")
-public String geAllProduct(Model model)
+public String getAllProduct(Model model)
 		{
 			List<Product> products=productservice.getAllProduct();
 			model.addAttribute("pro1", products);
+			
 			return "ProductList";
 		}
 @RequestMapping("/all/product/viewproduct/{id}")
@@ -129,7 +130,7 @@ public String editproduct(@ModelAttribute(name="Product") Product product)
 @RequestMapping("/all/product/searchbycategory")
 public String selectbycategory(@RequestParam String searchCondition,Model model){
 
-	model.addAttribute("product",productservice.getAllProduct());
+	model.addAttribute("pro1",productservice.getAllProduct());
 	if(searchCondition.equals("All"))
 		model.addAttribute("searchCondition","");
 	else
@@ -148,7 +149,7 @@ public String getaddcategory(Model model)
 public String savecategory(@ModelAttribute (name="category") Category category)
 {
 	productservice.savecategory(category);
-	return "redirect:/all/product/getproductform";
+	return "redirect:/admin/product/getproductform";
 }
 
 }

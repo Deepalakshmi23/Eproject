@@ -11,6 +11,48 @@
 <script type="text/javascript" src="resources/engine1/jquery.js"></script>
 <!-- End WOWSlider.com HEAD section -->
 </head>
+
+<style type="text/css">
+.container1 {
+	background: transparent;
+	border: 1px solid #b4f7b5;
+	border-radius: 10px;
+	margin: 10px 10px;
+}
+#f1_container1 {
+	position: relative;
+	width: 100px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	height: 300px;
+	z-index: 1;
+	
+}
+#f1_container1 {
+	perspective: 1000;
+}
+.face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+.proname{
+	font-size: 15px;
+	color: blue;
+	text-align: center;
+    margin-top: 10px; 
+}
+ .proprice{
+	font-size: 18px;
+	color: black;
+	text-align: center;
+}
+.img{
+	text-align: center; 
+}
+ 
+</style> 
 <body>
 
 <!-- Start WOWSlider.com BODY section -->
@@ -34,6 +76,25 @@
 <script type="text/javascript" src="resources/engine1/wowslider.js"></script>
 <script type="text/javascript" src="resources/engine1/script.js"></script>
 <!-- End WOWSlider.com BODY section -->
-
+<div class="container1">
+		<div class="row">
+			<c:forEach items="${product}" var="product">
+				<div class="col-md-2">
+					<div id="f1_container1">
+						<div id="f1_card1" class="shadow">
+							<div class="front face">
+								<c:url value="/resources/${product.id}.png" var="url1"></c:url>
+								<c:url value="/all/product/viewproduct/${product.id}" var="url2"></c:url>
+								<a href="${url2}"><img src="${url1}" height="150" width="150"/></a>
+								<b><p class="proname">${product.productName}</p></b>
+								<p class="proprice">&#8377; ${product.price}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</c:forEach>
+		</div>
+</div>
 </body>
 </html>
+<%@ include file="footer.jsp"%>

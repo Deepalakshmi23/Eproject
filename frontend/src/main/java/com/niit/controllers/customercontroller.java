@@ -47,7 +47,7 @@ public class customercontroller {
 		}
 		customerservice.registerCustomer(customer);
 		System.out.print(customer.getUser().getUsername());
-		return "redirect:/all/product/productlist";
+		return "redirect:/login";
 	}
 
 }

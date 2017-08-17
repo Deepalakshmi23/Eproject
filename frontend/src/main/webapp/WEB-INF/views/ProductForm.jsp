@@ -91,3 +91,5 @@ function validateForm() {
 
 </body>
 </html>
+
+<%@ include file="footer.jsp"%>

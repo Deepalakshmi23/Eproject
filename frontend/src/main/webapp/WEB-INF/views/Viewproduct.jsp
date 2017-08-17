@@ -49,19 +49,20 @@
 	<c:url value="/cart/addtocart/${pro1.id}" var="shop"></c:url>
 		<form action="${shop}">
 			<!-- Enter Units<input type="text" name="units"><br> -->
-			
+			<center><label>Enter Quantity</label>
 			<input type="text" name="units"   />
 			
 			<button type="submit" style="background:none;border:none;padding:0" class="btn btn-default" >
-			<span class="glyphicon glyphicon-shopping-cart"></span>AddToCart</button>
+			<span class="glyphicon glyphicon-shopping-cart"></span>AddToCart</button></center>
 			</form>
 	</c:if>
 	</security:authorize>
-	<c:url value="/all/products/getallproduct" var="action"></c:url>
+	<c:url value="/all/product/productlist" var="action"></c:url>
 		<form action="${action}">
 			<button type="submit"  class="btn btn-success center-block" >
-			<span class="glyphicon glyphicon-open"></span>Back</button>
+			<span class="glyphicon glyphicon-eye-open"></span>Back</button>
 			</form>
 </div>
 </body>
 </html>
+<%@ include file="footer.jsp"%>

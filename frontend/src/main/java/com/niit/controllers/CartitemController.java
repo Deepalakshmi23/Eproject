@@ -67,8 +67,10 @@ public class CartitemController {
 			Customer customer = customerservice.customerbyusername(username);
 			System.out.println(customer.getEmail());
 			cart cart = customer.getCart();
+			int count=cart.getCartitems().size();
 			System.out.println(cart.getId());
 			model.addAttribute("ca",cart);
+			model.addAttribute("i",count);
 			System.out.println(username);
 			return "cart";
 			

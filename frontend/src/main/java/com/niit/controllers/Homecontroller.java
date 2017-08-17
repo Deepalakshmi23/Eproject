@@ -22,13 +22,7 @@ import com.niit.service.Productservice;
 public class Homecontroller {
 	@Autowired
 	private Productservice productservice;
-	/*@RequestMapping("/home")
-	public String homepage()
-	{
-		System.out.println("Controller");
-		return "home";
-	}
-	*/
+	
 	Homecontroller(){
 		System.out.println("Controller");
 	}
@@ -61,5 +55,6 @@ public class Homecontroller {
 			}
 		return "login";
 }
+	
 	
 }

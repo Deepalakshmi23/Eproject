@@ -8,6 +8,15 @@
 <title>Insert title here</title>
 </head>
 <body>
+<center>
 <h6>Thank you for purchasing</h6>
+<c:url value="/resources/thank.png" var="action"></c:url>
+<img  src="${action }" height:"500",width:"500">
+<br>
+<c:url value="/" var="act"></c:url>
+
+ <a href="${act}"" class="btn btn-success">VisitAgain</a>
+</center>
 </body>
 </html>
+<%@ include file="footer.jsp"%>

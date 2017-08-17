@@ -15,6 +15,7 @@ body {
 }
 </style>
 <script type="text/javascript">
+
 function sync()
 {
   var n1 = document.getElementById('d');
@@ -193,3 +194,4 @@ return true;
 	
 </body>
 </html>
+<%@ include file="footer.jsp"%>

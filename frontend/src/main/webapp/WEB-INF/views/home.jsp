@@ -9,4 +9,5 @@
 <body>
 <jsp:include page="header.jsp"></jsp:include>
 </body>
+<%@ include file="footer.jsp"%>
 </html>
